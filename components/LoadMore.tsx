@@ -12,7 +12,7 @@ let page = 2 ;
 
 function LoadMore() {
   const { ref, inView } = useInView();  // We use the useInView hook to detect when the spinner is in the viewport.
-  const [data , setData] = useState<AnimeProp[]>([]) ; // We use the useState hook to store the data we get from the API.
+  const [data , setData] = useState([]) ; // We use the useState hook to store the data we get from the API.
 
   useEffect(() => {
     if (inView) {
