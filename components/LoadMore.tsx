@@ -17,7 +17,7 @@ function LoadMore() {
   useEffect(() => {
     if (inView) {
       fetchAnime(page).then((res) => {
-        setData([...data, ...res]); // We use the spread operator to add the new data to the existing data.
+        setData((prevData:AnimeProp[]) => [...prevData, ...res]);
         page++;
       });
     }
